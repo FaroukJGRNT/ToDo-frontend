@@ -5,9 +5,329 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.header {
+  padding-left: 4%;
+  padding-right: 4%;
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bolder;
+}
+
+.header img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 5px;
+  margin-left: 8px;
+  text-align: center;
+}
+
+.header button {
+  background-color: transparent;
+  border: 0px;
+  cursor: pointer;
+}
+
+.header #dropdown_options {
+  display: none;
+  text-align: center;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border: 1px solid grey;
+  background-color: rgb(247, 244, 244);
+  padding: 0px;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown_option {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: small;
+  margin: 0px;
+}
+
+.dropdown_option:hover {
+  background-color: rgb(203, 193, 193);
+}
+
+.profile {
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+hr {
+  margin-top: 0%;
+  width: 90%;
+}
+
+.info_section {
+  text-align: center;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+#info_section_btn {
+  width: 200px;
+  height: 60px;
+  margin: 5px;
+  background-color: #84B753;
+  border: 0px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+#info_section_btn:hover {
+  background-color: #9fd66b;
+}
+
+
+.card {
+  width: 75%;
+  margin: auto;
+  margin-top: 10px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 10px;
+  border: 1px solid grey;
+  border-radius: 16px;
+  box-shadow: 4px 4px rgb(215, 210, 210);
+
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.card button {
+  background-color: transparent;
+  border: 0px;
+  cursor: pointer;
+}
+
+.card_text {
+  width: 80%;
+  margin-left: 15px;
+}
+
+.card_btns {
+  width: 12%;
+  margin-right: 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.card_upper_btns {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.status {
+  cursor: pointer;
+  width: 100%;
+  height: 25%;
+  border-radius: 10px;
+  color: white;
+  border: 0px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.small_text {
+  margin: 0px;
+  padding: 0px;
+  font-size: smaller;
+  color: gray;
+}
+
+.todo_title {
+  margin-bottom: 2px;
+}
+
+.modal_container {
+  position: fixed;
+  display: flex;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  flex-direction: column;
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px rgb(163, 155, 155) solid;
+  box-shadow: 2px 2px rgb(147, 141, 141);
+}
+
+.modal_overlay {
+  position: fixed;
+  z-index: 99;
+  top: 0px;
+  left: 0px;
+  width: 120%;
+  height: 120%;
+  background-color: gray;
+  opacity: 50%;
+}
+
+#cancel_btn {
+  background-color: #77a6ac;
+  font-weight: bolder;
+  color: white;
+  border: 0px;
+  border-radius: 10px;
+  width: 120px;
+  height: 40px;
+  margin: 5px;
+  cursor: pointer;
+}
+#cancel_btn:hover {
+  background-color: #b0c8cb;
+}
+
+#delete_btn {
+  background-color: red;
+  font-weight: bolder;
+  color: white;
+  border: 0px;
+  border-radius: 10px;
+  width: 120px;
+  height: 40px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#delete_btn:hover {
+  background-color: rgb(255, 107, 107);
+}
+
+.login_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 2%;
+  width: 30%;
+  border: 1px #9E8B8B solid;
+  border-radius: 15px;
+  background-color: #EFF9F8;
+  z-index: 100;
+}
+
+.text_link {
+  color: #1FCCB8;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.text_input {
+  margin: 2%;
+  width: 70%;
+  height: 4vh;
+  border-radius: 15px;
+  border: 1px solid #9E8B8B;
+  padding: 10px;
+  font-weight: 550;
+}
+
+#submit_btn {
+  background-color: #84B753;
+  margin-top: 5%;
+  color: white;
+  font-weight: bolder;
+  border-radius: 10px;
+  border: 0px;
+  height: 55px;
+  width: 25%;
+  font-size: large;
+  cursor: pointer;
+}
+#submit_btn:hover {
+  background-color: #9dda65;
+}
+
+#big_cancel_btn {
+  background-color: #9E8B8B;
+  margin: 5%;
+  color: white;
+  font-weight: bolder;
+  border-radius: 10px;
+  border: 0px;
+  height: 55px;
+  width: 25%;
+  font-size: large;
+  cursor: pointer;
+}
+#big_cancel_btn:hover {
+  background-color: #c0baba;
+}
+
+.login_form label {
+  margin-left: 15%;
+  text-align: left;
+  display: block;    /* Force chaque label à prendre toute la largeur */
+  margin-bottom: 5px; /* Un petit espace entre le label et l'input */
+}
+
+#form_container {
+  position: fixed;
+  width: 55%;
+  height: 80%;
+  padding: 0px;
+}
+
+#edit_form_container {
+  position: fixed;
+  width: 60%;
+  height: 80%;
+  padding: 0px;
+}
+
+.text_area {
+  margin: 2%;
+  width: 70%;
+  height: 6vh;
+  border-radius: 15px;
+  border: 1px solid #9E8B8B;
+  padding: 10px;
+  font-weight: 500;
+}
+
+#due_date {
+  margin: 2%;
+  width: 70%;
+  height: 4vh;
+  border-radius: 15px;
+  border: 1px solid #9E8B8B;
+  padding: 10px;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
+#register_container {
+  top: 64%;
+  margin-bottom: 5%;
 }
