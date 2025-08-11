@@ -11,13 +11,10 @@ import ToDoList from "./TodDoList";
 function Home () {
     
     const {user, setUser} = React.useContext(userContext)
-    const navigate = useNavigate()
 
-    useEffect(() => {
-        if (user === null) {
-            navigate("/login")
-        }
-      }, [user])
+    if (user === null) {
+        return <LoginBox/>
+    }
 
     return (
         <>
