@@ -17,7 +17,7 @@ function InfoSection ({onUpdate}) {
         <>
             <div className="info_section">
                 <h1>YOUR TASKS</h1>
-                <h3>Goofy ahh quote</h3>
+                <h3>"Be strongrth than your excuse."</h3>
                 <button onClick={showForm} id="info_section_btn">New task +</button>
                 {isFormVisible && <ToDoFormModal onUpdate={onUpdate} onClose={closeForm}/>}
             </div>
